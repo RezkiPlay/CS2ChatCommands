@@ -12,7 +12,6 @@ public class ThirdPersonPlugin : BasePlugin
     {
         Console.WriteLine("[ThirdPersonPlugin] Plugin Loaded!");
 
-        // Tambahkan command !tp
         AddCommand("tp", "Toggle Third Person Mode", ToggleThirdPerson);
     }
 
@@ -22,8 +21,6 @@ public class ThirdPersonPlugin : BasePlugin
         {
             return;
         }
-
-        // Mengaktifkan third-person mode
         Server.ExecuteCommand($"sm_say {player.PlayerName} entered third-person mode!");
         player.ExecuteClientCommand("thirdperson");
     }
